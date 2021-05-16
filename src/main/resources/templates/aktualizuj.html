@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aktualizuj</title>
+    </head>
+<body>
+<form   th:action="@{/aktualizuj}" th:object="${computer}">
+
+    <table>
+        <tr>
+            <td>Podaj Marke </td>
+            <td><input name="marka" th:field="*{marka}"> </td>
+        </tr>
+        <tr>
+            <td>Podaj Model</td>
+            <td> <input name="model" th:field="*{model}"> </td>
+        </tr>
+        <tr>
+            <td>    Podaj procesor</td>
+            <td><input name="procesor" th:field="*{procesor}"></td>
+        </tr>
+        <tr>
+            <td>     Podaj kartę graficzną    </td>
+            <td><input name="procesor" th:field="*{kartaGraficzna}"></td>
+        </tr>
+        <tr>
+            <td>     Podaj opis </td>
+            <td><input name="opis" th:field="*{opis}">
+                <input type="hidden" name="id" th:field="*{id}"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit"></td>
+    </table>
+</form>
+</body>
+</html>
