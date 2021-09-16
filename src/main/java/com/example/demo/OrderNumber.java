@@ -2,17 +2,17 @@ package com.example.demo;
 import javax.persistence.*;
 
 @Entity
-public class NumerZamowienia {
+public class OrderNumber {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idZamowienia;
     private String numerZamowienia;
 
-    public NumerZamowienia(String numerZamowienia) {
+    public OrderNumber(String numerZamowienia) {
         this.numerZamowienia = numerZamowienia;
     }
 
-    public NumerZamowienia() {
+    public OrderNumber() {
     }
 
     public String getNumerZamowienia() {

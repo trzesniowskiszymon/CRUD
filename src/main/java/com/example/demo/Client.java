@@ -1,11 +1,9 @@
 package com.example.demo;
 
-import com.example.demo.NumerZamowienia;
-
 import javax.persistence.*;
 
 @Entity
-public class Klient {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idKlienta;
@@ -13,22 +11,22 @@ public class Klient {
     private String nazwisko;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private NumerZamowienia numerZamowienia;
+    private OrderNumber orderNumber;
 
-    public Klient(String imie, String nazwisko) {
+    public Client(String imie, String nazwisko) {
         this.imie = imie;
         this.nazwisko = nazwisko;
     }
 
-    public Klient() {
+    public Client() {
     }
 
-    public NumerZamowienia getZamowienie() {
-        return numerZamowienia;
+    public OrderNumber getZamowienie() {
+        return orderNumber;
     }
 
-    public void setNumerZamowienia(NumerZamowienia obiektZamowienia) {
-        this.numerZamowienia = obiektZamowienia;
+    public void setNumerZamowienia(OrderNumber obiektZamowienia) {
+        this.orderNumber = obiektZamowienia;
     }
 
 

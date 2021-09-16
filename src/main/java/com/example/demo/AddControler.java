@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class addControler {
+public class AddControler {
     private CompRepo compRepo;
 
     @Autowired
-    public addControler(CompRepo compRepo) {
+    public AddControler(CompRepo compRepo) {
         this.compRepo = compRepo;
     }
 
